@@ -10,12 +10,10 @@ module.exports = function toReadable (number) {
         return arrHun[num-2];
     }
     if (number < 100) {
-        let doz = (number % 10);
-        return (arrHun[num-2] + ' ' + arrTwen[doz]);
-    }
-        let hun = Math.floor(number / 100);
-        let n100 = Math.floor(number % 100 / 10);
-        let n10 = number % 100;
+        return (arrHun[num-2] + ' ' + arrTwen[number % 10])}
+    let hun = Math.floor(number / 100);
+    let n100 = Math.floor(number % 100 / 10);
+    let n10 = number % 100;
         if (number % 100 === 0) {
             return (arrTwen[hun] + ' ' + 'hundred');
         }
